@@ -6,7 +6,7 @@
 #    By: oscarmathot <oscarmathot@student.42.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/03 17:33:31 by oscarmathot       #+#    #+#              #
-#    Updated: 2023/12/04 12:08:33 by oscarmathot      ###   ########.fr        #
+#    Updated: 2023/12/04 21:54:07 by oscarmathot      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 #VARIABLES
 
 NAME 	:= cub3d
-SRC 	:= main.c helpers.c
+SRC 	:= main.c helpers.c read_map.c file_checks.c initialize.c
 SUBDIR	:= srcs/
 SRCS	:= $(addprefix $(SUBDIR),$(SRC))
 OBJ 	:= $(SRCS:.c=.o)

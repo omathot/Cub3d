@@ -6,7 +6,7 @@
 /*   By: oscarmathot <oscarmathot@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 01:28:19 by oscarmathot       #+#    #+#             */
-/*   Updated: 2023/12/04 15:28:42 by oscarmathot      ###   ########.fr       */
+/*   Updated: 2023/12/04 19:02:47 by oscarmathot      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,27 +83,27 @@ int	are_letters(char *str)
 	return (0);
 }
 
-int	no_numbers(char *str)
+int	no_numbers(char *str, int *pos)
 {
 	int	i;
+	int	commas;
 
-	i = 0;
-	while (str[i])
+	i = (*pos);
+	commas = 0;
+	while (str[(i)])
 	{
-		if ((str[i] > 57 || str[i] < 48) && !ft_isspace(str[i]))
+		if (str[i] == ',')
+			commas++;
+		if ((str[i] > 57 || str[i] < 48) && !ft_isspace(str[i]) && str[i] != '\0')
+		{
+			if (commas <= 2 && str[i] == ',')
+			{
+				i++;
+				continue ;
+			}
 			return (1);
+		}
 		i++;
 	}
 	return (0);
 }
-
-// char	*copy_filename(char *str, int *pos)
-// {
-// 	int	i;
-
-// 	i = (*pos);
-// 	while (str[i])
-// 	{
-
-// 	}
-// }
