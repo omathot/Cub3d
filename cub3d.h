@@ -6,7 +6,7 @@
 /*   By: oscarmathot <oscarmathot@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 17:28:46 by oscarmathot       #+#    #+#             */
-/*   Updated: 2023/12/04 15:37:51 by oscarmathot      ###   ########.fr       */
+/*   Updated: 2023/12/04 18:01:57 by oscarmathot      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,9 @@ typedef struct	s_file_loc
 	char	*w_wall;
 	char	*path;
 	char	*gun;
-	char	*portal;
-	char	*patrol;
+	char	*portal1;
+	char	*portal2;
+	char	*nazis;
 	char	*decor;
 }	t_file_loc;
 
@@ -76,6 +77,6 @@ bool	ft_isspace(unsigned char c);
 void	free_double_char(char **array);
 char	*cp_until_sp(char *str, int *pos);
 int		are_letters(char *str);
-int		no_numbers(char *str);
+int	no_numbers(char *str, int *pos);
 
 #endif
